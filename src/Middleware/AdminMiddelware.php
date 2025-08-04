@@ -8,8 +8,7 @@ class AdminMiddelware {
     if (!isset($_COOKIE['admincookie'])) {
       http_response_code(401);
       echo json_encode([
-        'success' => false,
-        'message' => 'Musisz być zalogowany'
+        'success' => false
       ]);
       exit;
     }
